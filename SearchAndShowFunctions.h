@@ -55,8 +55,9 @@ void SearchInfo(Car* rentcar, int* length1) {
 		<< "\t\t\t\t5.По году\n"
 		<< "\t\t\t\t6.По ценовому диапазону\n";
 	cin >> option2;
-
+	
 	if (option2 == 1) {
+
 		char model2[20];
 		cout << "\nВведите модель автомобиля:\n";
 		cin >> model2;
@@ -64,8 +65,7 @@ void SearchInfo(Car* rentcar, int* length1) {
 		{
 			int result = _strnicmp(model2, rentcar[i].model, strlen(model2));
 			if (result == 0) {
-				cout << "|  No  |    Марка        |     Модель     |   Цвет   |   Номер   |   Год   |   Цена   |\n";
-				cout << "_______________________________________________________________________________________\n";
+				
 				cout << "|  " << rentcar[i].num << "   |     " << rentcar[i].model << "      |      " << rentcar[i].marka << "       |   " << rentcar[i].color << "   |   " << rentcar[i].number << "     |   " << rentcar[i].year << "   |   " << rentcar[i].price << "   |" << endl;				flag = false;
 			}
 
@@ -81,8 +81,7 @@ void SearchInfo(Car* rentcar, int* length1) {
 		{
 			int result = _strnicmp(marka2, rentcar[i].marka, strlen(marka2));
 			if (result == 0) {
-				cout << "|  No  |    Марка        |     Модель     |   Цвет   |   Номер   |   Год   |   Цена   |\n";
-				cout << "_______________________________________________________________________________________\n";
+				
 				cout << "|  " << rentcar[i].num << "   |     " << rentcar[i].model << "      |      " << rentcar[i].marka << "       |   " << rentcar[i].color << "   |   " << rentcar[i].number << "     |   " << rentcar[i].year << "   |   " << rentcar[i].price << "   |" << endl;				flag = false;
 			}
 
@@ -98,8 +97,7 @@ void SearchInfo(Car* rentcar, int* length1) {
 		{
 			int result = _strnicmp(color2, rentcar[i].color, strlen(color2));
 			if (result == 0) {
-				cout << "|  No  |    Марка        |     Модель     |   Цвет   |   Номер   |   Год   |   Цена   |\n";
-				cout << "_______________________________________________________________________________________\n";
+				
 				cout << "|  " << rentcar[i].num << "   |     " << rentcar[i].model << "      |      " << rentcar[i].marka << "       |   " << rentcar[i].color << "   |   " << rentcar[i].number << "     |   " << rentcar[i].year << "   |   " << rentcar[i].price << "   |" << endl;				flag = false;
 			}
 
@@ -115,8 +113,7 @@ void SearchInfo(Car* rentcar, int* length1) {
 		{
 			int result = _strnicmp(number2, rentcar[i].number, strlen(number2));
 			if (result == 0) {
-				cout << "|  No  |    Марка        |     Модель     |   Цвет   |   Номер   |   Год   |   Цена   |\n";
-				cout << "_______________________________________________________________________________________\n";
+				
 				cout << "|  " << rentcar[i].num << "   |     " << rentcar[i].model << "      |      " << rentcar[i].marka << "       |   " << rentcar[i].color << "   |   " << rentcar[i].number << "     |   " << rentcar[i].year << "   |   " << rentcar[i].price << "   |" << endl;
 				flag = false;
 			}
@@ -136,8 +133,7 @@ void SearchInfo(Car* rentcar, int* length1) {
 		{
 
 			if (Minyear < rentcar[i].year && Maxyear > rentcar[i].year) {
-				cout << "|  No  |    Марка        |     Модель     |   Цвет   |   Номер   |   Год   |   Цена   |\n";
-				cout << "_______________________________________________________________________________________\n";
+				
 				cout << "|  " << rentcar[i].num << "   |     " << rentcar[i].model << "      |      " << rentcar[i].marka << "       |   " << rentcar[i].color << "   |   " << rentcar[i].number << "     |   " << rentcar[i].year << "   |   " << rentcar[i].price << "   |" << endl;				flag = false;
 			}
 
@@ -156,8 +152,7 @@ void SearchInfo(Car* rentcar, int* length1) {
 		for (int i = 0; i < *length1; i++)
 		{
 			if (Minprice > rentcar[i].price && Maxprice < rentcar[i].price) {
-				cout << "|  No  |    Марка        |     Модель     |   Цвет   |   Номер   |   Год   |   Цена   |\n";
-				cout << "_______________________________________________________________________________________\n";
+				
 				cout << "|  " << rentcar[i].num << "   |     " << rentcar[i].model << "      |      " << rentcar[i].marka << "       |   " << rentcar[i].color << "   |   " << rentcar[i].number << "     |   " << rentcar[i].year << "   |   " << rentcar[i].price << "   |" << endl;
 				flag = false;
 			}
